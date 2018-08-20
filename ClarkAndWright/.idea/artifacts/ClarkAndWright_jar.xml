@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ClarkAndWright:jar">
+    <output-path>$USER_HOME$/Desktop/Proje</output-path>
+    <root id="archive" name="ClarkAndWright.jar">
+      <element id="module-output" name="ClarkAndWright" />
+    </root>
+  </artifact>
+</component>

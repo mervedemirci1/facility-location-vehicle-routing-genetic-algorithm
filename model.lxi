@@ -1,0 +1,67 @@
+B 2 C o m p i l a t i o n
+B 136 Include File Summary
+B 150 Equation Listing    SOLVE m3 Using MIP From line 98
+D 151 objective
+D 351 lin1
+D 362 lin2
+D 373 routeDepot
+D 390 routeUsed
+D 401 routeCapacity
+D 436 depotNumber
+D 443 flowBalance
+D 472 superFlow
+D 483 detRarc
+D 494 detArc
+D 517 arcFlow
+D 528 depotLeaving
+D 557 depotLeaving2
+D 586 depotEntering
+D 615 depotEntering2
+D 644 nonDepotLeaving
+D 667 nonDepotEntering
+D 690 flowNonNegative
+D 701 nonDepotCustomers
+D 724 nonDepotCustomers2
+B 749 Column Listing      SOLVE m3 Using MIP From line 98
+E 750 obj
+E 758 flow
+E 783 sn
+E 804 fa
+E 910 ra
+E 1010 un
+E 1035 arc
+E 1074 rarc
+E 1093 ruse
+B 1141 Model Statistics    SOLVE m3 Using MIP From line 98
+B 1157 Solution Report     SOLVE m3 Using MIP From line 98
+F 1196 objective
+F 1204 lin1
+F 1309 lin2
+F 1414 routeDepot
+F 1429 routeUsed
+F 1534 routeCapacity
+F 1547 depotNumber
+F 1555 flowBalance
+F 1570 superFlow
+F 1585 detRarc
+F 2590 detArc
+F 2695 arcFlow
+F 2800 depotLeaving
+F 2815 depotLeaving2
+F 2830 depotEntering
+F 2845 depotEntering2
+F 2860 nonDepotLeaving
+F 2875 nonDepotEntering
+F 2890 flowNonNegative
+F 2995 nonDepotCustomers
+F 3010 nonDepotCustomers2
+G 3020 obj
+G 3026 flow
+G 3131 sn
+G 3146 fa
+G 3161 ra
+G 3266 un
+G 3371 arc
+G 3476 rarc
+G 4481 ruse
+B 4503 E x e c u t i o n

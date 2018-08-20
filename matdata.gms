@@ -1,0 +1,2 @@
+$gdxin matdata.gdx
+$gdxin

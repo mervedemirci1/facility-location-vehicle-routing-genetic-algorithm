@@ -1,0 +1,32 @@
+[PROJECT]
+
+[RP:UNTITLED_1]
+1=
+
+[RP:MODEL (3)]
+1=
+
+[RP:UNTITLED_2]
+1=
+
+[RP:YEDEK_PROJEMODEL]
+1=
+
+[RP:MODEL]
+1=
+
+[MRUFILES]
+1=C:\Users\merve123\Desktop\Proje\model.gms
+2=C:\Users\merve123\Desktop\YEDEK_PROJEMODEL.gms
+3=C:\Users\merve123\Downloads\model (3).gms
+
+[OPENWINDOW_1]
+FILE0=C:\Users\merve123\Desktop\modell.gms
+FILE1=C:\Users\merve123\Desktop\Proje\model.lst
+FILE2=C:\Users\merve123\Desktop\Proje\Untitled_2.gms
+FILE3=C:\Users\merve123\Desktop\Proje\Untitled_2.gms
+MAXIM=1
+TOP=50
+LEFT=50
+HEIGHT=400
+WIDTH=400
