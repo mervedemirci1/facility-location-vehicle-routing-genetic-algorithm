@@ -11,10 +11,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6ad88899-a622-4188-9ce8-3dbbcc6917b1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../ClarkAndWright.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../ClarkAndWright.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ClarkAndWright_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ClarkAndWright_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bottik/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bottik/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../output.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,8 +64,19 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="6028" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="6028" />
         </counts>
       </usages-collector>
     </session>
@@ -73,10 +86,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
-              <caret line="132" selection-start-line="132" selection-end-line="132" />
+            <state relative-caret-position="528">
+              <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#532#598#0" />
+                <element signature="e#1093#1154#0" />
               </folding>
             </state>
           </provider>
@@ -88,6 +103,16 @@
     <findStrings>
       <find>syste</find>
       <find>10</find>
+      <find>out.</find>
+      <find>iter</find>
+      <find>max</find>
+      <find>stack</find>
+      <find>sc</find>
+      <find>out</find>
+      <find>objective</find>
+      <find>newıN</find>
+      <find>best</find>
+      <find>update</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -148,7 +173,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534644475290" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534902140271" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -201,16 +226,18 @@
       <workItem from="1534645119545" duration="458000" />
       <workItem from="1534682803428" duration="2455000" />
       <workItem from="1534778187270" duration="1125000" />
+      <workItem from="1534864016105" duration="25366000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32141000" />
+    <option name="totallyTimeSpent" value="57507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13388805" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1354009" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -219,16 +246,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36393443" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5229508" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3295082" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3295082" />
       <window_info anchor="bottom" id="JProfiler" order="12" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -267,10 +294,12 @@
     <entry file="file://$PROJECT_DIR$/input.txt" />
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="132" selection-start-line="132" selection-end-line="132" />
+        <state relative-caret-position="528">
+          <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#532#598#0" />
+            <element signature="e#1093#1154#0" />
           </folding>
         </state>
       </provider>
