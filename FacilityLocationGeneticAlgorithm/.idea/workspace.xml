@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AnalysisUIOptions">
-    <option name="SCOPE_TYPE" value="3" />
-  </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="ClarkAndWright:jar" />
+      <artifact name="FacilityLocationGeneticAlgorithm:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ad88899-a622-4188-9ce8-3dbbcc6917b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="697b981b-1ac0-4bf0-8111-2b11beea3e5b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../ClarkAndWright/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ClarkAndWright/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacilityLocationExhaustiveSearch/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationExhaustiveSearch/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacilityLocationExhaustiveSearch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationExhaustiveSearch/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacilityLocationExhaustiveSearch/out/production/FacilityLocationExhaustiveSearch/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationExhaustiveSearch/out/production/FacilityLocationExhaustiveSearch/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacilityLocationExhaustiveSearch/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationExhaustiveSearch/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../output.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,57 +23,33 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="-328790696">
+    <session id="-1913123315">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.15" value="2" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.47" value="1" />
-          <entry key="project.opened" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="5163" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="5163" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
-          <entry key="txt" value="1" />
+          <entry key="java" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
-          <entry key="PLAIN_TEXT" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="32199341">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="JAVA" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="6030" />
+          <entry key="java" value="5816" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6030" />
+          <entry key="JAVA" value="5816" />
         </counts>
       </usages-collector>
     </session>
@@ -78,14 +57,12 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="121" column="39" lean-forward="true" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="39" />
+            <state relative-caret-position="528">
+              <caret line="258" column="27" selection-start-line="258" selection-start-column="27" selection-end-line="258" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#532#598#0" />
-                <element signature="e#1093#1154#0" />
               </folding>
             </state>
           </provider>
@@ -95,18 +72,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>syste</find>
-      <find>10</find>
-      <find>out.</find>
-      <find>iter</find>
-      <find>max</find>
-      <find>stack</find>
-      <find>sc</find>
-      <find>out</find>
-      <find>objective</find>
-      <find>newıN</find>
-      <find>best</find>
-      <find>update</find>
+      <find>9</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -115,18 +81,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
-    <exe-path />
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
-  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -143,37 +103,46 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="ClarkAndWright" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClarkAndWright" type="462c0819:PsiDirectoryNode" />
+              <item name="FacilityLocationGeneticAlgorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FacilityLocationGeneticAlgorithm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="ClarkAndWright" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClarkAndWright" type="462c0819:PsiDirectoryNode" />
+              <item name="FacilityLocationGeneticAlgorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FacilityLocationGeneticAlgorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FacilityLocationGeneticAlgorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FacilityLocationGeneticAlgorithm" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FacilityLocationGeneticAlgorithm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FacilityLocationGeneticAlgorithm" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="company" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534902140271" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535077209787" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../FacilityLocationExhaustiveSearch" />
     <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -189,8 +158,8 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="ClarkAndWright" />
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="FacilityLocationGeneticAlgorithm" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -209,28 +178,24 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6ad88899-a622-4188-9ce8-3dbbcc6917b1" name="Default Changelist" comment="" />
-      <created>1534606914992</created>
+      <changelist id="697b981b-1ac0-4bf0-8111-2b11beea3e5b" name="Default Changelist" comment="" />
+      <created>1535058559797</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1534606914992</updated>
-      <workItem from="1534606919850" duration="27765000" />
-      <workItem from="1534644690933" duration="278000" />
-      <workItem from="1534645018978" duration="60000" />
-      <workItem from="1534645119545" duration="458000" />
-      <workItem from="1534682803428" duration="2455000" />
-      <workItem from="1534778187270" duration="1125000" />
-      <workItem from="1534864016105" duration="25366000" />
+      <updated>1535058559797</updated>
+      <workItem from="1535058563251" duration="18002000" />
+      <workItem from="1535077317458" duration="282000" />
+      <workItem from="1535078147585" duration="90000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57912000" />
+    <option name="totallyTimeSpent" value="18374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1354009" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -239,17 +204,17 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5229508" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5032787" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3295082" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3295082" />
-      <window_info anchor="bottom" id="JProfiler" order="12" weight="0.3295082" />
+      <window_info anchor="bottom" id="JProfiler" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3295082" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -267,32 +232,20 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand>
-      <path>
-        <item name="ClarkAndWright" type="b2602c69:ProjectViewProjectNode" />
-        <item name="ClarkAndWright" type="462c0819:PsiDirectoryNode" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Scanner.java">
+    <entry file="file://$PROJECT_DIR$/../FacilityLocationExhaustiveSearch/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2219">
-          <caret line="863" selection-start-line="863" selection-end-line="863" />
+        <state relative-caret-position="527">
+          <caret line="36" column="9" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="36" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input.txt" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="121" column="39" lean-forward="true" selection-start-line="121" selection-start-column="39" selection-end-line="121" selection-end-column="39" />
+        <state relative-caret-position="528">
+          <caret line="258" column="27" selection-start-line="258" selection-start-column="27" selection-end-line="258" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#532#598#0" />
-            <element signature="e#1093#1154#0" />
           </folding>
         </state>
       </provider>
@@ -300,21 +253,10 @@
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArquillianSettingsConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>ClarkAndWright:jar</last-edited>
+          <last-edited>FacilityLocationGeneticAlgorithm:jar</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -362,7 +304,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>ClarkAndWright</last-edited>
+          <last-edited>FacilityLocationGeneticAlgorithm</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
