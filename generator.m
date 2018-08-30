@@ -1,6 +1,6 @@
 clear;
 clc;
-numOfLocations = 25;
+numOfLocations = 10;
 numOfMaxRoutes = numOfLocations;
 %We need to determine a radius and angle for each node
 networkRadius = 10000; %in meters
