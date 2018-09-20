@@ -47,7 +47,9 @@ public class Main {
         for (int i = 1; i < n - 1; i++) {
             for (int j = i + 1; j < n; j++) {
                 double current = distance[0][i] + distance[0][j] - distance[i][j];
-                if (current <= 0) continue;
+                if (current <= 0){
+                    continue;
+                }
                 int key = (i * n) + j;
                 if (next == 0) {
                     indices[0] = key;
@@ -221,8 +223,6 @@ public class Main {
                 indices = newIndices.clone();
                 savings = newSavingsList.clone();
             }
-
-
         }
 
 

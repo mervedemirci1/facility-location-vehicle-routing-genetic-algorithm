@@ -1,8 +1,8 @@
 clear;
 clc;
-numOfLocations = 1000;
+numOfLocations = 200;
 numOfDepots = 4;
-vehicleCapacity = 100;
+vehicleCapacity = 30;
 networkRadius = 25000;
 coordinates = zeros(2, numOfLocations);
 coordinates(1, 1:numOfLocations) = rand(1, numOfLocations) * networkRadius;
@@ -49,22 +49,19 @@ fclose(fileID);
 
 sizeA = [numOfLocations 1];
 sizeB = [1 1];
+sizeC = [numOfLocations numOfLocations];
 system('java -jar FacilityLocationGeneticAlgorithm.jar');
 fileID = fopen('output.txt', 'r');
 genetic = fscanf(fileID, '%d', sizeA);
-geneticSolution = fscanf(fileID, '%f', sizeB);
+assignments = fscanf(fileID, '%f', sizeB);
+adj = fscanf(fileID, '%f', sizeC);
 fclose(fileID);
 
-geneticResult = zeros(numOfLocations, numOfLocations);
-for i=1:numOfLocations
-    %genetic(i)
-    geneticResult(i, genetic(i)) = 1;
-    geneticResult(genetic(i), i) = 1;
-end
+%for i=1:numOfLocations
+%    assignments(i, genetic(i)) = 1;
+%    assignments(genetic(i), i) = 1;
+%end
 
-G = graph(geneticResult);
-
-plot(G, 'XData', coordinates(1, :), 'YData', coordinates(2 , :));
-title('Genetic');
-daspect([1 1 1]);
-
+gplot(adj ,coordinates');
+%title('Genetic');
+%daspect([1 1 1]);

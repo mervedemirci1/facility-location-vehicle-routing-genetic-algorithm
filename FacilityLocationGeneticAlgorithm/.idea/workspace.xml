@@ -1,26 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Module 'FacilityLocationGeneticAlgorithm'" />
+  </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="FacilityLocationGeneticAlgorithm:jar" />
     </artifacts-to-build>
   </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="false">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="697b981b-1ac0-4bf0-8111-2b11beea3e5b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../ClarkAndWright/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ClarkAndWright/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClarkAndWright/out/production/ClarkAndWright/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ClarkAndWright/out/production/ClarkAndWright/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClarkAndWright/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ClarkAndWright/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClarkAndWright/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ClarkAndWright/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FLPExhaustive.m" beforeDir="false" afterPath="$PROJECT_DIR$/../FLPExhaustive.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FacilityLocationExhaustiveSearch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationExhaustiveSearch/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FacilityLocationGeneticAlgorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FacilityLocationGeneticAlgorithm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FacilityLocationGeneticAlgorithm/com/company/Main$Individual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FacilityLocationGeneticAlgorithm/com/company/Main$Individual.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FacilityLocationGeneticAlgorithm/com/company/Main$SecondLevelGeneticAlgorithmResult.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/FacilityLocationGeneticAlgorithm/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FacilityLocationGeneticAlgorithm/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../generator.m" beforeDir="false" afterPath="$PROJECT_DIR$/../generator.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../input.gdx" beforeDir="false" afterPath="$PROJECT_DIR$/../input.gdx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../model.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../model.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../output.gdx" beforeDir="false" afterPath="$PROJECT_DIR$/../output.gdx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../output.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,6 +42,23 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/FacilityLocationGeneticAlgorithm$Main.ic" NAME="Main Coverage Results" MODIFIED="1535919448457" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1913123315">
@@ -63,25 +93,69 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-794364870">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="13" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="10496" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="10496" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="116" column="76" selection-start-line="116" selection-start-column="76" selection-end-line="116" selection-end-column="76" />
+            <state relative-caret-position="1747">
+              <caret line="240" lean-forward="true" selection-start-line="240" selection-end-line="240" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="class#SecondLevelGeneticAlgorithmResult#0;class#Main#0" />
+                <element signature="class#Offer#0;class#Main#0" />
                 <element signature="class#Individual#0;class#Main#0" />
-                <element signature="method#Individual#0;class#Individual#0;class#Main#0" />
-                <element signature="method#calculateNonIdenticalGeneNumber#0;class#Individual#0;class#Main#0" />
-                <element signature="method#solveFirstLevelWithGeneticAlgorithm#0;class#Main#0" />
+                <element signature="class#ClarkeWrightComparator#0;class#Main#0" />
+                <element signature="method#getNodesOfDepot#0;class#Main#0" />
+                <element signature="method#calculateSavings#0;class#Main#0" />
+                <element signature="method#fillThePopulationDepots#0;class#Main#0" />
+                <element signature="method#localSearch#0;class#Main#0" />
                 <element signature="method#mutate#0;class#Main#0" />
                 <element signature="method#insertInstanceAndSort#0;class#Main#0" />
                 <element signature="method#choose#0;class#Main#0" />
-                <element signature="method#pick#0;class#Main#0" />
               </folding>
             </state>
           </provider>
@@ -94,6 +168,8 @@
       <find>9</find>
       <find>pick</find>
       <find>plant</find>
+      <find>verif</find>
+      <find>add</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -112,6 +188,12 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="82" />
     <option name="y" value="-9" />
@@ -123,38 +205,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="FacilityLocationGeneticAlgorithm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FacilityLocationGeneticAlgorithm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FacilityLocationGeneticAlgorithm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FacilityLocationGeneticAlgorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FacilityLocationGeneticAlgorithm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FacilityLocationGeneticAlgorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FacilityLocationGeneticAlgorithm" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FacilityLocationGeneticAlgorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -162,11 +213,13 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535590792983" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536230394375" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -184,7 +237,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="FacilityLocationGeneticAlgorithm" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="-Xmx6072m" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method v="2">
@@ -213,14 +266,37 @@
       <workItem from="1535208614846" duration="974000" />
       <workItem from="1535303603155" duration="12030000" />
       <workItem from="1535467482117" duration="16031000" />
+      <workItem from="1535624721590" duration="645000" />
+      <workItem from="1535625421634" duration="129000" />
+      <workItem from="1535625571894" duration="69000" />
+      <workItem from="1535748799608" duration="25000" />
+      <workItem from="1535769446729" duration="2108000" />
+      <workItem from="1535835296533" duration="5299000" />
+      <workItem from="1535898950951" duration="17372000" />
+      <workItem from="1535938944887" duration="3469000" />
+      <workItem from="1535976602631" duration="2399000" />
+      <workItem from="1536069899988" duration="10012000" />
+      <workItem from="1536112747190" duration="7929000" />
+      <workItem from="1536181696398" duration="5769000" />
+      <workItem from="1536330189577" duration="452000" />
+      <workItem from="1537437834734" duration="1576000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47409000" />
+    <option name="totallyTimeSpent" value="104662000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.27685326" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -231,26 +307,29 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5032787" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.51552796" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39906833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32919255" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32919255" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="JProfiler" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3295082" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3295082" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32919255" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32817337" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32919255" />
+      <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32919255" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="14" weight="0.32919255" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24940239" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32988048" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32988048" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32988048" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2685325" />
@@ -290,6 +369,19 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>adj[15][46]</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../FacilityLocationExhaustiveSearch/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -298,21 +390,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/AbstractCollection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="105" column="36" lean-forward="true" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/HashSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="219" column="23" selection-start-line="219" selection-start-column="23" selection-end-line="219" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1575">
+          <caret line="137" column="13" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="116" column="76" selection-start-line="116" selection-start-column="76" selection-end-line="116" selection-end-column="76" />
+        <state relative-caret-position="1747">
+          <caret line="240" lean-forward="true" selection-start-line="240" selection-end-line="240" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="class#SecondLevelGeneticAlgorithmResult#0;class#Main#0" />
+            <element signature="class#Offer#0;class#Main#0" />
             <element signature="class#Individual#0;class#Main#0" />
-            <element signature="method#Individual#0;class#Individual#0;class#Main#0" />
-            <element signature="method#calculateNonIdenticalGeneNumber#0;class#Individual#0;class#Main#0" />
-            <element signature="method#solveFirstLevelWithGeneticAlgorithm#0;class#Main#0" />
+            <element signature="class#ClarkeWrightComparator#0;class#Main#0" />
+            <element signature="method#getNodesOfDepot#0;class#Main#0" />
+            <element signature="method#calculateSavings#0;class#Main#0" />
+            <element signature="method#fillThePopulationDepots#0;class#Main#0" />
+            <element signature="method#localSearch#0;class#Main#0" />
             <element signature="method#mutate#0;class#Main#0" />
             <element signature="method#insertInstanceAndSort#0;class#Main#0" />
             <element signature="method#choose#0;class#Main#0" />
-            <element signature="method#pick#0;class#Main#0" />
           </folding>
         </state>
       </provider>

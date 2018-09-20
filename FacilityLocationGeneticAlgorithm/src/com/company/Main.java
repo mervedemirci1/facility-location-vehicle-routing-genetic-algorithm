@@ -1,44 +1,62 @@
 package com.company;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Locale;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 
 public class Main {
 
-    private static class SecondLevelGeneticAlgorithmResult {
-        int[][] bestCycle;
-        double objective;
+    private static class Offer implements Comparable<Offer> {
+        int i;
+        int j;
+        double save;
 
-        private SecondLevelGeneticAlgorithmResult(int[][] bestCycle, double objective) {
-            this.bestCycle = bestCycle;
-            this.objective = objective;
+        private Offer(int i, int j, double save) {
+            this.i = i;
+            this.j = j;
+            this.save = save;
+        }
+
+        @Override
+        public int compareTo(Offer o) {
+            return Double.compare(o.save, save);
         }
     }
 
     private static class Individual {
-        int n;
-        int r;
+        final int n;
+        final int r;
         double fitness;
+        double clarkeAndWrightFitness;
         int[] depots;
         int[] assignments;
         int[] assignmentCount;
         int[] lastBucket;
+        int[][] adj;
 
         private Individual(int n, int r) {
             this.r = r;
             this.n = n;
 
             fitness = 0;
+            clarkeAndWrightFitness = 0;
             depots = new int[r];
             assignmentCount = new int[n];
             assignments = new int[n];
+            adj = new int[n][n];
+        }
+
+        private void unionAdjacency(int[][] other) {
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    if (other[i][j] == 1) {
+                        adj[i][j] = 1;
+                    }
+                }
+            }
         }
 
         private int calculateNonIdenticalGeneNumber(Individual other) { //Bucket search
@@ -54,29 +72,31 @@ public class Main {
                 if (bucket[i] == 1) result++;
 
             lastBucket = bucket;
-
             return result / 2;
         }
 
-        private Individual deepClone() {
-            Individual cloned = new Individual(n, r);
-            cloned.fitness = this.fitness;
-            cloned.depots = this.depots.clone();
-            cloned.assignments = this.assignments.clone();
-            cloned.assignmentCount = this.assignmentCount.clone();
-            return cloned;
+    }
+
+    private static class ClarkeWrightComparator implements Comparator<Individual> {
+        @Override
+        public int compare(Individual o1, Individual o2) {
+            return Double.compare(o1.clarkeAndWrightFitness, o2.clarkeAndWrightFitness);
         }
     }
 
     public static void main(String[] args) {
         final String fileName = "input.txt";
-        int n;
-        int r;
+        final int n;
+        final int r;
         double[][] distance;
         double[] demand;
         double[] fixedCost;
         double[] plantDistance;
+        double vehicleCapacity = 100;
+
         Random rand = new Random();
+
+        //region Read From Input File
         File file = new File(fileName);
         try {
             Scanner sc = new Scanner(file).useLocale(Locale.US);
@@ -107,29 +127,56 @@ public class Main {
         for (int i = 0; i < n - 1; i++)
             for (int j = i + 1; j < n; j++)
                 distance[j][i] = distance[i][j];
+        //endregion
 
-        long startMillis = System.currentTimeMillis();
-        int firstLevelIteration = 500;
+
+        int firstLevelIteration = 1000;
+
+        int secondLevelIteration = 1000;
+
         int d = (int) Math.ceil((double) n / r);
+
         int populationSize = Math.max(2, (int) Math.ceil(((double) n / 100) * (Math.log(choose(n, r)) / d))) * d;
+
         double mutationProbability = 0.05;
 
-        Individual[] solution = solveFirstLevelWithGeneticAlgorithm(r, populationSize, distance,
+        Individual[] population = locateDepots(r, populationSize, distance,
                 fixedCost, plantDistance, mutationProbability, firstLevelIteration, rand);
 
+        int scan = 0;
+        List<Individual> topThree = new ArrayList<>(4);
+        while (topThree.size() != 3 && scan < populationSize) {
+            Individual individual = population[scan];
+            boolean add = true;
+            for (Individual i2 : topThree) {
+                if (i2.calculateNonIdenticalGeneNumber(individual) == 0) {
+                    add = false;
+                    break;
+                }
+            }
+            if (add) topThree.add(individual);
+            scan++;
+        }
+        Individual[] topThreeArr = new Individual[3];
+        topThree.toArray(topThreeArr);
 
-        long endMillis = System.currentTimeMillis();
 
-        System.out.println();
-        System.out.println("Genetic Duration : " + (endMillis - startMillis));
-        System.out.printf("Best objective : %f \r\n", solution[0].fitness);
-        System.out.println();
+        applySavingsAlgorithm(topThreeArr, distance, demand, vehicleCapacity,
+                fixedCost, plantDistance, secondLevelIteration, rand);
+        ClarkeWrightComparator comparator = new ClarkeWrightComparator();
+        Arrays.sort(topThreeArr, comparator);
+
         StringBuilder outputText = new StringBuilder();
         for (int i = 0; i < n; i++)
-            outputText.append(solution[0].assignments[i] + 1).append(" ");
+            outputText.append(topThreeArr[0].assignments[i] + 1).append(" ");
         outputText.append("\r\n");
-        outputText.append(solution[0].fitness);
-
+        outputText.append(topThreeArr[0].fitness);
+        outputText.append("\r\n");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                outputText.append(topThreeArr[0].adj[i][j]).append(" ");
+            }
+        }
         try {
             File outputFile = new File("output.txt");
             BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
@@ -141,192 +188,151 @@ public class Main {
 
     }
 
-    private static SecondLevelGeneticAlgorithmResult solveSecondLevelWithGeneticAlgorithm(int n, double[][] distance,
-                                                                                          int secondLevelIteration, Random rand, double[] demand, int vehicleCapacity) {
-        int[] indices = new int[n * n / 2];
-        double[] savings = new double[n * n / 2];
-        int next = 0;
-        for (int i = 1; i < n - 1; i++) {
-            for (int j = i + 1; j < n; j++) {
-                double current = distance[0][i] + distance[0][j] - distance[i][j];
-                if (current <= 0) continue;
-                int key = (i * n) + j;
-                if (next == 0) {
-                    indices[0] = key;
-                    savings[0] = current;
-                    next++;
-                    continue;
-                }
-                //linear search for now
-                int k = 0;
-                while (savings[k] > current) k++;
-                for (int o = next - 1; o >= k; o--) {
-                    savings[o + 1] = savings[o];
-                    indices[o + 1] = indices[o];
-                }
-                savings[k] = current;
-                indices[k] = key;
-                next++;
+    private static void applySavingsAlgorithm(Individual[] population, double[][] distance, double[] demands,
+                                              double vehicleCapacity, double[] fixedCost, double[] plantDistance,
+                                              int iterationCount, Random rand) {
+        int n = population[0].assignments.length;
+        int r = population[0].depots.length;
+
+        for (Individual individual : population) {  //For each individual in population
+            //Starting fitness, base fitness we can say
+            for (int i = 0; i < r; i++) {
+                int depot = individual.depots[i];
+                individual.clarkeAndWrightFitness += fixedCost[depot] + plantDistance[depot];
             }
-        }
-
-        int[][] bestCycle = new int[n - 1][n + 2];
-        double bestObjective = Double.MAX_VALUE;
-
-        for (int iteration = 0; iteration < secondLevelIteration; iteration++) {
-            //Decision variables
-            int[][] cycle = new int[n - 1][n + 2];
-            int[] node2Cycle = new int[n];
-            double[] sumDemand = new double[n];
-            double objective = 0;
-            //Decision variables
-            double[] newSavingsList;
-            int[] newIndices;
-            if (iteration != 0) {
-                newSavingsList = new double[next];
-                newIndices = new int[next];
-                boolean[] used = new boolean[next];
-
-                //In each iteration we have to fill one savings list and one indices list
-                //We do it by making tournaments
-                for (int i = 0; i < next - 1; i++) {
-                    int tournamentSize = rand.nextInt(Math.min(next - i - 1, 10)) + 1;
-                    int[] tournamentNodes = new int[tournamentSize];
-                    double[] probabilities = new double[tournamentSize];
-                    double sumProbability = 0;
-
-                    int pickedNodes = 0;
-                    int index = 0;
-
-                    while (pickedNodes < tournamentSize) {
-                        if (!used[index]) {
-                            tournamentNodes[pickedNodes] = index;
-                            probabilities[pickedNodes] = savings[index];
-                            sumProbability += savings[index];
-                            pickedNodes++;
-                        }
-                        index++;
-                    }
-
-                    //normalize the probability
-                    for (int j = 0; j < tournamentSize; j++) {
-                        probabilities[j] = probabilities[j] / sumProbability;
-                    }
-
-                    int winner = -1;
-                    double win = rand.nextDouble();
-                    double stack = 0;
-                    for (int j = 0; j < tournamentSize; j++) {
-                        stack += probabilities[j];
-                        if (stack >= win) {
-                            used[tournamentNodes[j]] = true;
-                            winner = j;
-                            break;
-                        }
-                    }
-
-                    newSavingsList[i] = savings[tournamentNodes[winner]];
-                    newIndices[i] = indices[tournamentNodes[winner]];
-                }
-
-                for (int i = 0; i < next; i++) {
-                    if (!used[i]) {
-                        newIndices[next - 1] = indices[i];
-                        newSavingsList[next - 1] = savings[i];
-                        used[i] = true;
-                        break;
-                    }
-                }
-
-            } else {
-                newSavingsList = savings.clone();
-                newIndices = indices.clone();
-            }
-            //Initial solution
-            for (int i = 1; i < n; i++) {
-                cycle[i - 1][0] = 3;
-                cycle[i - 1][2] = i;
-                sumDemand[i - 1] = demand[i];
-                objective += 2 * distance[0][i];
-                node2Cycle[i] = i - 1;
-            }
-
-            for (int i = 0; i < next; i++) {
-                int n2 = newIndices[i] % n;
-                int n1 = (newIndices[i] - n2) / n;
-
-                int c1 = node2Cycle[n1];
-                int c2 = node2Cycle[n2];
-
-                int len1 = cycle[c1][0];
-                int len2 = cycle[c2][0];
-
-                if (cycle[c2][len2 - 1] == n2 && cycle[c1][2] == n1) {
-                    //if n2 is the end and n1 is the start, swap
-                    int swap = n2;
-                    n2 = n1;
-                    n1 = swap;
-                    swap = c1;
-                    c1 = c2;
-                    c2 = swap;
-                    swap = len1;
-                    len1 = len2;
-                    len2 = swap;
-                } else if (cycle[c2][2] == n2 && cycle[c1][2] == n1) {
-                    //reverse the c1
-                    for (int j = 0; j < len1 / 2; j++) {
-                        int temp = cycle[c1][j + 1];
-                        cycle[c1][j + 1] = cycle[c1][len1 - j];
-                        cycle[c1][len1 - j] = temp;
-                    }
-                }
-
-                if (c1 != c2 && sumDemand[c1] + sumDemand[c2] < vehicleCapacity) {
-                    if (cycle[c1][len1 - 1] == n1) {
-                        //n1 is the end
-                        if (cycle[c2][2] == n2) {
-                            //n2 is the start
-                            for (int j = 0; j < len2 - 1; j++) {
-                                int val = cycle[c2][2 + j];
-                                cycle[c1][len1 + j] = val;
-                                node2Cycle[val] = c1;
+            for (int i = 0; i < r; i++) { //For each depot in individual, solve Genetic Clarke and Wright
+                double bestObjective = Double.MAX_VALUE;
+                int[][] bestAdj = null;
+                int depot = individual.depots[i];
+                int[] nodes = getNodesOfDepot(depot, individual.assignments, individual.assignmentCount[depot]);
+                Offer[] offers = calculateSavings(nodes, depot, distance);
+                for (int iteration = 0; iteration < iterationCount; iteration++) {
+                    int[][] adj = new int[n][n];
+                    int[] cycleList = new int[n];
+                    boolean[] won = new boolean[offers.length];
+                    double[] totalDemands = new double[n];
+                    int[] order = new int[offers.length];
+                    for (int j = 0; j < offers.length; j++) {
+                        double sumSaving = 0;
+                        double luck = rand.nextDouble();
+                        int tournamentSize = rand.nextInt(Math.min(10, offers.length - j)) + 1;
+                        int[] contestants = new int[tournamentSize];
+                        int picked = 0;
+                        int scan = 0;
+                        while (picked != tournamentSize) {
+                            if (!won[scan]) { //If this contestant has not won before
+                                contestants[picked] = scan;
+                                picked++;
+                                sumSaving += offers[scan].save;
                             }
-                            sumDemand[c1] += sumDemand[c2];
-                            sumDemand[c2] = 0;
-                            cycle[c1][0] = len1 + len2 - 2;
-                            cycle[c2][0] = 0;
-                            objective -= newSavingsList[i];
-                        } else if (cycle[c2][len2 - 1] == n2) {
-                            for (int j = 0; j < len2 - 1; j++) {
-                                //n2 is the end
-                                int val = cycle[c2][len2 - 1 - j];
-                                cycle[c1][len1 + j] = val;
-                                node2Cycle[val] = c1;
+                            scan++;
+                        }
+                        for (int k = 0; k < tournamentSize; k++) {
+                            luck -= offers[contestants[k]].save / sumSaving;
+                            if (luck <= 0) {
+                                //winner is k
+                                order[j] = contestants[k];
+                                won[contestants[k]] = true;
+                                break;
                             }
-                            sumDemand[c1] += sumDemand[c2];
-                            sumDemand[c2] = 0;
-                            cycle[c1][0] = len1 + len2 - 2;
-                            cycle[c2][0] = 0;
-                            objective -= newSavingsList[i];
+                        }
+
+                    }
+
+                    double objective = 0;
+                    for (int c = 0; c < nodes.length; c++) {
+                        int node = nodes[c];
+                        cycleList[node] = c + 1;
+                        totalDemands[c + 1] = demands[node];
+                        adj[depot][node] = 2;
+                        adj[node][depot] = 2;
+                        objective += 2 * distance[node][depot];
+                    }
+
+
+                    for (int k = 0; k < offers.length; k++) {
+                        Offer offer = offers[order[k]];
+                        int ord1 = adj[depot][offer.i];
+                        int ord2 = adj[depot][offer.j];
+                        int c1 = cycleList[offer.i];
+                        int c2 = cycleList[offer.j];
+                        if (c1 != c2 && totalDemands[c1] + totalDemands[c2] <= vehicleCapacity) {
+                            if (ord1 == 2 && ord2 == 1) {
+                                ord1 = 1;
+                                ord2 = 2;
+                                int tc = c1;
+                                c1 = c2;
+                                c2 = tc;
+                                tc = offer.i;
+                                offer.i = offer.j;
+                                offer.j = tc;
+                            }
+                            if (ord1 == 1 && ord2 == 1) {
+                                for (int j = 0; j < n; j++)
+                                    if (cycleList[j] == c2)
+                                        cycleList[j] = c1;
+                            }
+                            if (ord1 >= 1 && ord2 >= 1) {
+                                totalDemands[c1] += totalDemands[c2];
+                                totalDemands[c2] = 0;
+                                cycleList[offer.j] = cycleList[offer.i];
+                                adj[depot][offer.i]--;
+                                adj[depot][offer.j]--;
+                                adj[offer.i][depot]--;
+                                adj[offer.j][depot]--;
+                                adj[offer.j][offer.i] = 1;
+                                adj[offer.i][offer.j] = 1;
+                                objective -= offer.save;
+                            }
                         }
                     }
-                }
-            }
 
-            if (objective < bestObjective) {
-                bestObjective = objective;
-                for (int i = 0; i < n - 1; i++) {
-                    System.arraycopy(cycle[i], 0, bestCycle[i], 0, n + 2);
+                    if (objective < bestObjective) {
+                        bestObjective = objective;
+                        bestAdj = adj;
+                    }
                 }
-                indices = newIndices.clone();
-                savings = newSavingsList.clone();
-            }
-        }
+                individual.unionAdjacency(bestAdj);
+                individual.clarkeAndWrightFitness += bestObjective;
 
-        return new SecondLevelGeneticAlgorithmResult(bestCycle, bestObjective);
+            } //End for(i=0 : r) each depot
+
+
+        } //End for(Individual individual : population)
     }
 
-    private static void fillThePopulationDepots(Individual[] population, int groupSize, int groupCount, int n, int r, Random rand) {
+    private static int[] getNodesOfDepot(int depot, int[] assignments, int count) {
+        int[] nodes = new int[count - 1];
+        int in = 0;
+        for (int j = 0; j < assignments.length; j++) {
+            if (j != depot && assignments[j] == depot) {
+                nodes[in] = j;
+                in++;
+
+            }
+        }
+        return nodes;
+    }
+
+    private static Offer[] calculateSavings(int[] nodes, int depot, double[][] distance) {
+        Offer[] offers = new Offer[nodes.length * (nodes.length - 1) / 2];
+        int in = 0;
+        for (int j = 0; j < nodes.length - 1; j++) {
+            int nodeA = nodes[j];
+            for (int k = j + 1; k < nodes.length; k++) {
+                int nodeB = nodes[k];
+                double saving = distance[nodeA][depot] + distance[nodeB][depot] - distance[nodeA][nodeB];
+                Offer offer = new Offer(nodeA, nodeB, saving);
+                offers[in] = offer;
+                in++;
+            }
+        }
+        Arrays.sort(offers);
+        return offers;
+    }
+
+    private static void fillThePopulationDepots(Individual[] population, int groupSize, int groupCount, int n,
+                                                int r, Random rand) {
         int lastUpdated = -1;
         int populationSize = population.length;
         for (int i = 0; i < populationSize; i++) {
@@ -366,15 +372,109 @@ public class Main {
                 individual.depots[j] -= 1;
     }
 
-    private static Individual[] solveFirstLevelWithGeneticAlgorithm(int r, int populationSize, double[][] distance, double[] fixedCost, double[] plantDistance, double mutationProbability, int firstLevelIteration, Random rand) {
+    private static Individual[] locateDepots(int r, int populationSize, double[][] distance, double[] fixedCost,
+                                             double[] plantDistance, double mutationProbability,
+                                             int iterationCount, Random rand) {
         int n = distance.length;
         int groupSize = (int) Math.ceil((double) n / r);
         int groupCount = populationSize / groupSize;
+        double mutationStep = (0.5 - mutationProbability) / iterationCount;
 
         Individual[] population = new Individual[populationSize];
+
         fillThePopulationDepots(population, groupSize, groupCount, n, r, rand); //To fill the depots we need to know group size group count etc.
 
-        for (int i = 0; i < populationSize; i++) {
+        localSearch(population, n, r, distance, fixedCost, plantDistance);
+
+        for (int i = 0; i < iterationCount; i++) {
+            int n1 = pick(populationSize, rand);
+            int n2 = pick(populationSize, rand);
+
+            Individual parent1 = population[n1];
+            Individual parent2 = population[n2];
+
+            int nonIdenticalGeneNumber = parent1.calculateNonIdenticalGeneNumber(parent2);
+            if (nonIdenticalGeneNumber == 0)
+                continue;
+
+            int swapAmount = rand.nextInt(nonIdenticalGeneNumber) + 1;
+            int[] bucket = parent1.lastBucket;
+            int j1 = 0;
+            int j2 = 0;
+
+            Individual offspring1, offspring2;
+
+            offspring1 = new Individual(n, r);
+            offspring1.depots = parent1.depots.clone();
+
+
+            offspring2 = new Individual(n, r);
+            offspring2.depots = parent2.depots.clone();
+
+            while (swapAmount > 0) {
+                while (bucket[parent1.depots[j1]] != 1)
+                    j1++;
+                while (bucket[parent2.depots[j2]] != 1)
+                    j2++;
+
+                offspring1.depots[j1] = parent2.depots[j2];
+                offspring2.depots[j2] = parent1.depots[j1];
+                swapAmount--;
+            }
+
+            if (rand.nextDouble() < mutationProbability)
+                mutate(offspring1, n, rand);
+            if (rand.nextDouble() < mutationProbability)
+                mutate(offspring2, n, rand);
+
+            mutationProbability += mutationStep;
+
+            for (int k = 0; k < r; k++) {
+                offspring1.fitness += fixedCost[offspring1.depots[k]] + plantDistance[offspring1.depots[k]];
+                offspring2.fitness += fixedCost[offspring2.depots[k]] + plantDistance[offspring2.depots[k]];
+            }
+
+            for (int j = 0; j < n; j++) {
+                double closestDistanceA = Double.MAX_VALUE;
+                double closestDistanceB = Double.MAX_VALUE;
+                int depotA = -1;
+                int depotB = -1;
+                for (int k = 0; k < r; k++) {
+                    if (closestDistanceA > distance[j][offspring1.depots[k]]) {
+                        closestDistanceA = distance[j][offspring1.depots[k]];
+                        depotA = offspring1.depots[k];
+                        offspring1.assignments[j] = offspring1.depots[k];
+                    }
+                    if (closestDistanceB > distance[j][offspring2.depots[k]]) {
+                        closestDistanceB = distance[j][offspring2.depots[k]];
+                        depotB = offspring2.depots[k];
+                        offspring2.assignments[j] = offspring2.depots[k];
+                    }
+                }
+                offspring1.assignmentCount[depotA]++;
+                offspring2.assignmentCount[depotB]++;
+
+                offspring1.fitness += closestDistanceA;
+                offspring2.fitness += closestDistanceB;
+            }
+
+            if (offspring1.fitness < population[populationSize - 1].fitness)
+                insertInstanceAndSort(offspring1, population);
+
+            if (offspring2.fitness < population[populationSize - 1].fitness)
+                insertInstanceAndSort(offspring2, population);
+
+            if (population[populationSize - 1].fitness < population[0].fitness * 1.010) break;
+
+        }
+
+        return population;
+    }
+
+    private static void localSearch(Individual[] population, int n, int r, double[][] distance, double[] fixedCost,
+                                    double[] plantDistance) {
+        for (int i = 0; i < population.length; i++) {
+
             for (int j = 0; j < n; j++) {
                 double min = Double.MAX_VALUE;
                 for (int k = 0; k < r; k++) {
@@ -417,9 +517,16 @@ public class Main {
                 }
                 for (int k : nodes)
                     population[i].assignments[k] = alternativeDepot;
+                //change the assignments
+                //change the assignment counts
+                population[i].assignmentCount[currentDepot] = 0;
+                population[i].assignmentCount[alternativeDepot] = countOfElement;
+
                 population[i].depots[j] = alternativeDepot;
                 population[i].fitness += bestAlternativeFitness;
             }
+
+
             //Sort
             for (int j = i; j > 0; j--) {
                 if (population[j - 1].fitness > population[j].fitness) {
@@ -429,94 +536,6 @@ public class Main {
                 } else break;
             }
         }
-
-        //Genetic start
-        for (int i = 0; i < firstLevelIteration; i++) {
-            int n1 = pick(populationSize, rand);
-            int n2 = pick(populationSize, rand);
-
-            Individual parent1 = population[n1];
-            Individual parent2 = population[n2];
-
-            int nonIdenticalGeneNumber = parent1.calculateNonIdenticalGeneNumber(parent2);
-            if (nonIdenticalGeneNumber == 0)
-                continue;
-
-            int swapAmount = rand.nextInt(nonIdenticalGeneNumber) + 1;
-            int[] bucket = parent1.lastBucket;
-            int j1 = 0;
-            int j2 = 0;
-
-            Individual offspring1, offspring2;
-
-            offspring1 = parent1.deepClone();
-            offspring2 = parent2.deepClone();
-
-            while (swapAmount > 0) {
-                while (bucket[parent1.depots[j1]] != 1)
-                    j1++;
-                while (bucket[parent2.depots[j2]] != 1)
-                    j2++;
-
-                offspring1.depots[j1] = parent2.depots[j2];
-                offspring2.depots[j2] = parent1.depots[j1];
-                swapAmount--;
-            }
-
-            if (rand.nextDouble() < mutationProbability)
-                mutate(offspring1, n, rand);
-            if (rand.nextDouble() < mutationProbability)
-                mutate(offspring2, n, rand);
-
-            offspring1.fitness = 0;
-            offspring1.assignments = new int[n];
-            offspring1.assignmentCount = new int[n];
-
-
-            offspring2.fitness = 0;
-            offspring2.assignments = new int[n];
-            offspring2.assignmentCount = new int[n];
-
-            for (int k = 0; k < r; k++) {
-                offspring1.fitness += fixedCost[offspring1.depots[k]] + plantDistance[offspring1.depots[k]];
-                offspring2.fitness += fixedCost[offspring2.depots[k]] + plantDistance[offspring2.depots[k]];
-            }
-
-            for (int j = 0; j < n; j++) {
-                double closestDistanceA = Double.MAX_VALUE;
-                double closestDistanceB = Double.MAX_VALUE;
-                int depotIndexA = -1;
-                int depotIndexB = -1;
-                for (int k = 0; k < r; k++) {
-                    if (closestDistanceA > distance[j][offspring1.depots[k]]) {
-                        closestDistanceA = distance[j][offspring1.depots[k]];
-                        depotIndexA = k;
-                        offspring1.assignments[j] = offspring1.depots[k];
-                    }
-                    if (closestDistanceB > distance[j][offspring2.depots[k]]) {
-                        closestDistanceB = distance[j][offspring2.depots[k]];
-                        depotIndexB = k;
-                        offspring2.assignments[j] = offspring2.depots[k];
-                    }
-                }
-                offspring1.assignmentCount[depotIndexA]++;
-                offspring2.assignmentCount[depotIndexB]++;
-
-                offspring1.fitness += closestDistanceA;
-                offspring2.fitness += closestDistanceB;
-            }
-
-            if (offspring1.fitness < population[populationSize - 1].fitness) {
-                insertInstanceAndSort(offspring1, population);
-            }
-
-            if (offspring2.fitness < population[populationSize - 1].fitness) {
-                insertInstanceAndSort(offspring2, population);
-            }
-
-        }
-
-        return population;
     }
 
     private static void mutate(Individual offspring, int pointCount, Random rand) {
@@ -540,8 +559,8 @@ public class Main {
         population[populationSize - 1] = offspring;
         for (int j = populationSize - 1; j > 0; j--) {
             if (population[j].fitness < population[j - 1].fitness) {
-                Individual temp = population[j - 1].deepClone();
-                population[j - 1] = population[j].deepClone();
+                Individual temp = population[j - 1];
+                population[j - 1] = population[j];
                 population[j] = temp;
             } else break;
         }
@@ -559,7 +578,7 @@ public class Main {
         return result;
     }
 
-    private static int pick(int L, @NotNull Random rand) {
+    private static int pick(int L, Random rand) {
         return L - (int) Math.floor((Math.sqrt(((rand.nextDouble() * 4) * (L * (L + 1))) + 1) - 1) / 2) - 1;
     }
 

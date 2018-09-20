@@ -10,18 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ad88899-a622-4188-9ce8-3dbbcc6917b1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ClarkAndWright/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ClarkAndWright/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FLPExhaustive.m" beforeDir="false" afterPath="$PROJECT_DIR$/../FLPExhaustive.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FacilityLocationExhaustiveSearch/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationExhaustiveSearch/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/FacilityLocationGeneticAlgorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/FacilityLocationGeneticAlgorithm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/out/production/FacilityLocationGeneticAlgorithm/com/company/Main$Individual.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/out/production/FacilityLocationGeneticAlgorithm/com/company/Main$Individual.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/out/production/FacilityLocationGeneticAlgorithm/com/company/Main$SecondLevelGeneticAlgorithmResult.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/out/production/FacilityLocationGeneticAlgorithm/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/out/production/FacilityLocationGeneticAlgorithm/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../generator.m" beforeDir="false" afterPath="$PROJECT_DIR$/../generator.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../input.gdx" beforeDir="false" afterPath="$PROJECT_DIR$/../input.gdx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../model.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../model.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../output.gdx" beforeDir="false" afterPath="$PROJECT_DIR$/../output.gdx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../output.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -87,16 +89,38 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1607118238">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="8" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-560">
-              <caret line="196" column="59" lean-forward="true" selection-start-line="196" selection-start-column="59" selection-end-line="196" selection-end-column="59" />
+            <state relative-caret-position="270">
+              <caret line="93" column="52" lean-forward="true" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1360#1421#0" />
               </folding>
             </state>
           </provider>
@@ -118,6 +142,7 @@
       <find>newıN</find>
       <find>best</find>
       <find>update</find>
+      <find>savin</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -154,6 +179,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -165,16 +191,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534902140271" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535976497908" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FacilityLocationExhaustiveSearch" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -228,16 +253,20 @@
       <workItem from="1534778187270" duration="1125000" />
       <workItem from="1534864016105" duration="25366000" />
       <workItem from="1535414410232" duration="1580000" />
+      <workItem from="1535902130115" duration="14264000" />
+      <workItem from="1535976563019" duration="2178000" />
+      <workItem from="1536069806788" duration="3298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59492000" />
+    <option name="totallyTimeSpent" value="79232000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13691376" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1434263" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -246,8 +275,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5229508" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5217391" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39906833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -284,20 +313,15 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Scanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2219">
-          <caret line="863" selection-start-line="863" selection-end-line="863" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Scanner.java" />
     <entry file="file://$PROJECT_DIR$/input.txt" />
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-560">
-          <caret line="196" column="59" lean-forward="true" selection-start-line="196" selection-start-column="59" selection-end-line="196" selection-end-column="59" />
+        <state relative-caret-position="270">
+          <caret line="93" column="52" lean-forward="true" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1360#1421#0" />
           </folding>
         </state>
       </provider>

@@ -7,7 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bf3126f-1bd7-435b-aab2-dc2d2187b496" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClarkAndWright/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ClarkAndWright/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClarkAndWright/out/production/ClarkAndWright/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ClarkAndWright/out/production/ClarkAndWright/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClarkAndWright/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../ClarkAndWright/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClarkAndWright/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ClarkAndWright/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FLPExhaustive.m" beforeDir="false" afterPath="$PROJECT_DIR$/../FLPExhaustive.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/out/production/FacilityLocationGeneticAlgorithm/com/company/Main$Individual.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/out/production/FacilityLocationGeneticAlgorithm/com/company/Main$Individual.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/out/production/FacilityLocationGeneticAlgorithm/com/company/Main$SecondLevelGeneticAlgorithmResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/out/production/FacilityLocationGeneticAlgorithm/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/out/production/FacilityLocationGeneticAlgorithm/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../FacilityLocationGeneticAlgorithm/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../output.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -85,9 +97,41 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1748616625">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="562">
+              <caret line="56" column="14" lean-forward="true" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -124,6 +168,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -150,9 +197,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -211,16 +255,17 @@
       <workItem from="1535077602949" duration="541000" />
       <workItem from="1535078243052" duration="365000" />
       <workItem from="1535208376133" duration="231000" />
+      <workItem from="1536069835375" duration="61000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8267000" />
+    <option name="totallyTimeSpent" value="8328000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27609682" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2804781" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -258,7 +303,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/solid-octo-meme/bottik/src/Main.java" />
+    <entry file="file://$PROJECT_DIR$/../bottik/src/Main.java" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/jshell/jshell_console_4.snippet" />
     <entry file="file://$PROJECT_DIR$/../ClarkAndWright/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -269,8 +314,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-166">
-          <caret line="69" column="25" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
+        <state relative-caret-position="562">
+          <caret line="56" column="14" lean-forward="true" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
